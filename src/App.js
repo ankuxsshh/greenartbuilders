@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
 import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
-import GalleryPage from './pages/GalleryPage';
+import GalleryPage from './pages/GalleryPage'; 
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
