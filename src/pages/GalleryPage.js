@@ -19,7 +19,8 @@ const GalleryPage = () => {
       category: "residential",
       location: "Malibu, CA",
       description: "Net-zero energy home with solar integration and recycled materials",
-      features: ["Solar panels", "Green roof", "Rainwater harvesting"]
+      features: ["Solar panels", "Green roof", "Rainwater harvesting"],
+      image: "/images/a.jpeg"
     },
     {
       id: 2,
@@ -27,7 +28,8 @@ const GalleryPage = () => {
       category: "commercial",
       location: "Seattle, WA",
       description: "LEED Platinum certified commercial building with biophilic design",
-      features: ["Natural ventilation", "Living walls", "Smart lighting"]
+      features: ["Natural ventilation", "Living walls", "Smart lighting"],
+      image: "/images/b.jpeg"
     },
     {
       id: 3,
@@ -35,7 +37,8 @@ const GalleryPage = () => {
       category: "interior",
       location: "Portland, OR",
       description: "Eco-friendly cafe using reclaimed wood and energy-efficient fixtures",
-      features: ["Reclaimed materials", "LED lighting", "Indoor plants"]
+      features: ["Reclaimed materials", "LED lighting", "Indoor plants"],
+      image: "/images/c.jpeg"
     },
     {
       id: 4,
@@ -43,7 +46,8 @@ const GalleryPage = () => {
       category: "residential",
       location: "Santa Barbara, CA",
       description: "Beachfront property with sustainable materials and erosion control",
-      features: ["Salvaged wood", "Native landscaping", "Solar heating"]
+      features: ["Salvaged wood", "Native landscaping", "Solar heating"],
+      image: "/images/d.jpeg"
     },
     {
       id: 5,
@@ -51,7 +55,8 @@ const GalleryPage = () => {
       category: "commercial",
       location: "San Francisco, CA",
       description: "Green office space with rooftop garden and EV charging stations",
-      features: ["Rooftop garden", "EV charging", "Natural daylighting"]
+      features: ["Rooftop garden", "EV charging", "Natural daylighting"],
+      image: "/images/e.jpeg"
     },
     {
       id: 6,
@@ -59,7 +64,8 @@ const GalleryPage = () => {
       category: "landscape",
       location: "Boulder, CO",
       description: "Drought-resistant landscape with rainwater catchment system",
-      features: ["Xeriscaping", "Permeable paving", "Wildlife habitat"]
+      features: ["Xeriscaping", "Permeable paving", "Wildlife habitat"],
+      image: "/images/f.jpeg"
     },
     {
       id: 7,
@@ -67,7 +73,8 @@ const GalleryPage = () => {
       category: "commercial",
       location: "Aspen, CO",
       description: "Sustainable mountain retreat with geothermal heating",
-      features: ["Geothermal heating", "Local stone", "Energy recovery"]
+      features: ["Geothermal heating", "Local stone", "Energy recovery"],
+      image: "/images/g.jpeg"
     },
     {
       id: 8,
@@ -75,7 +82,8 @@ const GalleryPage = () => {
       category: "landscape",
       location: "Chicago, IL",
       description: "Commercial building rooftop transformed into productive urban farm",
-      features: ["Edible garden", "Compost system", "Pollinator habitat"]
+      features: ["Edible garden", "Compost system", "Pollinator habitat"],
+      image: "/images/h.jpeg"
     }
   ];
   
@@ -87,7 +95,7 @@ const GalleryPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-emerald-50">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-700 text-white">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1920')] bg-cover bg-center opacity-30 z-0"></div>
+        <div className="absolute inset-0 bg-[url('/images/i.jpeg')] bg-cover bg-center opacity-30 z-0"></div>
         
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
           <motion.h1 
@@ -143,16 +151,19 @@ const GalleryPage = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
               >
+                {/* Project Image */}
                 <div className="relative h-64 overflow-hidden">
-                  {/* Placeholder for image - in real app this would be an actual image */}
-                  <div className="w-full h-full bg-gray-200 border-2 border-dashed flex items-center justify-center">
-                    <span className="text-gray-500 text-lg">Project Image</span>
-                  </div>
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                  />
                   <div className="absolute bottom-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm">
                     {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                   </div>
                 </div>
                 
+                {/* Project Info */}
                 <div className="p-6">
                   <div className="flex justify-between items-start">
                     <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>

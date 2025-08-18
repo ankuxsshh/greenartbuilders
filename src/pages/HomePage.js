@@ -152,7 +152,9 @@ function HomePage() {
                 Building Excellence Since 2008
               </h2>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                Maskn Builders and Developers Pvt Ltd has been at the forefront of construction excellence in Kollam for over a decade. We combine traditional craftsmanship with modern technology to deliver exceptional results.
+                At GreenArt Builders & Architects, we bring your dream home to life with expert craftsmanship, innovative designs, and cost-friendly solutions. With over six years of experience in the industry, we have built a strong reputation for delivering high-quality residential constructions tailored to our clients' needs and budgets.
+
+Our team of skilled professionals ensures every project is built with strength, style, and sustainability, making your investment worthwhile. From foundation to finishing, we handle every aspect with precision, ensuring durability and elegance in every detail
               </p>
               <div className="space-y-4 mb-8">
                 {[

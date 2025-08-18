@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white p-6 z-50 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full bg-white p-2 z-50">
       <div className="container mx-auto">
         {/* Top Bar (Logo + Toggle Button) */}
         <div className="flex justify-between items-center">

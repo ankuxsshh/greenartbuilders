@@ -2,124 +2,111 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const ServicesPage = () => {
-  const [activeService, setActiveService] = useState('design');
+  const [activeService, setActiveService] = useState('construction');
   
   const services = [
     {
-      id: 'design',
-      title: 'Green Building Design',
-      description: 'Innovative eco-architecture that harmonizes with nature',
-      features: [
-        'Biophilic design principles',
-        'Energy modeling and simulation',
-        'Sustainable material selection',
-        'Site-specific climate analysis',
-        'Water conservation planning'
-      ],
-      icon: '📐'
-    },
-    {
       id: 'construction',
-      title: 'Eco-Friendly Construction',
-      description: 'Sustainable building methods with minimal environmental impact',
+      title: 'Construction',
+      description: 'Sustainable building solutions with minimal environmental impact',
       features: [
-        'Low-carbon concrete alternatives',
-        'Prefabricated modular systems',
-        'Zero-waste construction practices',
-        'Non-toxic material handling',
+        'Eco-friendly material sourcing',
+        'Energy-efficient building techniques',
+        'Waste reduction management',
+        'Green building certification support',
         'Renewable energy integration'
       ],
       icon: '🏗️'
     },
     {
       id: 'renovation',
-      title: 'Sustainable Renovations',
-      description: 'Transforming existing structures into eco-efficient spaces',
+      title: 'Renovation',
+      description: 'Transforming existing structures into modern, efficient spaces',
       features: [
-        'Energy retrofitting',
-        'Material upcycling and reuse',
-        'Indoor air quality improvement',
-        'Heritage conservation',
-        'Water efficiency upgrades'
+        'Structural upgrades and improvements',
+        'Energy efficiency enhancements',
+        'Material recycling and repurposing',
+        'Modernization of facilities',
+        'Space optimization solutions'
       ],
       icon: '🔨'
     },
     {
-      id: 'interiors',
-      title: 'Eco-Interior Design',
-      description: 'Healthy, sustainable interiors that promote wellbeing',
+      id: 'design',
+      title: 'Architectural & Interior Designing',
+      description: 'Creating functional and aesthetically pleasing spaces',
       features: [
-        'Non-toxic finishes and adhesives',
-        'Reclaimed and recycled materials',
-        'Natural lighting optimization',
-        'Living wall installations',
-        'Sustainable furniture sourcing'
+        'Concept development and space planning',
+        'Sustainable material selection',
+        'Lighting and ventilation optimization',
+        '3D modeling and visualization',
+        'Customized design solutions'
       ],
-      icon: '🎨'
+      icon: '📐'
     },
     {
-      id: 'landscape',
-      title: 'Sustainable Landscaping',
-      description: 'Creating biodiverse outdoor spaces that heal the environment',
+      id: 'visualization',
+      title: '3D Visualization',
+      description: 'Bringing designs to life with realistic simulations',
       features: [
-        'Native plant ecosystems',
-        'Permeable paving solutions',
-        'Rainwater harvesting systems',
-        'Edible gardens and food forests',
-        'Wildlife habitat restoration'
+        'Photorealistic renderings',
+        'Virtual reality walkthroughs',
+        'Material and lighting simulation',
+        'Interactive design presentations',
+        'Animation and fly-through videos'
       ],
-      icon: '🌿'
+      icon: '🖥️'
     },
     {
-      id: 'consulting',
-      title: 'Green Building Consulting',
-      description: 'Expert guidance for sustainable development projects',
+      id: 'sanctions',
+      title: 'Sanctions',
+      description: 'Navigating regulatory requirements for construction projects',
       features: [
-        'LEED certification support',
-        'Carbon footprint analysis',
-        'Sustainability reporting',
-        'Regulatory compliance',
-        'Lifecycle assessment'
+        'Building permit assistance',
+        'Regulatory compliance guidance',
+        'Zoning and land use approvals',
+        'Environmental impact assessments',
+        'Documentation preparation and submission'
       ],
-      icon: '📊'
+      icon: '📝'
     }
   ];
 
   const processSteps = [
     {
       step: 1,
-      title: "Discovery & Vision",
-      description: "We explore your goals and develop a sustainable vision for your project",
+      title: "Project Consultation",
+      description: "Understanding client requirements and project scope",
       icon: "💡"
     },
     {
       step: 2,
-      title: "Eco-Design Development",
-      description: "Our architects create innovative green designs tailored to your site",
+      title: "Design Development",
+      description: "Creating conceptual designs and technical specifications",
       icon: "✏️"
     },
     {
       step: 3,
-      title: "Material Selection",
-      description: "We source sustainable, non-toxic materials with low carbon footprint",
-      icon: "🌱"
+      title: "Planning & Approvals",
+      description: "Securing necessary sanctions and regulatory compliance",
+      icon: "📋"
     },
     {
       step: 4,
-      title: "Sustainable Construction",
-      description: "Our certified builders implement eco-friendly construction methods",
+      title: "Execution Phase",
+      description: "Construction/renovation with quality assurance",
       icon: "🔧"
     },
     {
       step: 5,
-      title: "Quality Assurance",
-      description: "Rigorous testing ensures environmental performance standards",
-      icon: "✅"
+      title: "Visualization Updates",
+      description: "Providing 3D visualizations throughout the process",
+      icon: "🖼️"
     },
     {
       step: 6,
-      title: "Project Completion",
-      description: "Handover with sustainability documentation and maintenance guidance",
+      title: "Project Handover",
+      description: "Final delivery with documentation and support",
       icon: "🏆"
     }
   ];
@@ -137,7 +124,7 @@ const ServicesPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Sustainable <span className="text-emerald-300">Construction Services</span>
+            Comprehensive <span className="text-emerald-300">Building Services</span>
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl mb-8 max-w-3xl text-emerald-100"
@@ -145,7 +132,7 @@ const ServicesPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Eco-friendly building solutions that create healthier spaces while protecting our planet
+            End-to-end solutions from design to construction and regulatory compliance
           </motion.p>
         </div>
       </section>
@@ -194,9 +181,9 @@ const ServicesPage = () => {
                   </div>
                   
                   <p className="text-gray-700 mb-8 text-lg">
-                    Our {service.title.toLowerCase()} service combines cutting-edge sustainable practices with 
-                    innovative design to create spaces that are both beautiful and environmentally responsible. 
-                    We prioritize renewable materials, energy efficiency, and ecological harmony in every project.
+                    Our {service.title.toLowerCase()} service delivers professional solutions tailored to your specific 
+                    requirements. We combine expertise with innovative approaches to ensure quality results 
+                    that meet industry standards and client expectations.
                   </p>
                   
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Key Features:</h3>
@@ -235,10 +222,10 @@ const ServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-emerald-600">Sustainable Process</span>
+              Our <span className="text-emerald-600">Service Process</span>
             </h2>
             <p className="text-gray-700 text-lg">
-              A structured approach to eco-friendly construction from concept to completion
+              Structured workflow ensuring quality and timely delivery
             </p>
             <div className="w-24 h-1 bg-emerald-500 mx-auto mt-6"></div>
           </div>
@@ -274,30 +261,30 @@ const ServicesPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Why Choose Our <span className="text-emerald-600">Eco-Services</span>
+                Why Choose Our <span className="text-emerald-600">Services</span>
               </h2>
               
               <div className="space-y-6">
                 {[
                   {
-                    title: "Certified Green Professionals",
-                    description: "Our team holds LEED, BREEAM, and Living Future accreditation",
-                    icon: "📜"
+                    title: "Industry Expertise",
+                    description: "Experienced professionals across all service domains",
+                    icon: "👨‍💼"
                   },
                   {
-                    title: "Proven Sustainability Results",
-                    description: "Average 45% energy reduction in our projects",
-                    icon: "📈"
+                    title: "Quality Assurance",
+                    description: "Rigorous quality control at every project phase",
+                    icon: "✅"
                   },
                   {
-                    title: "Holistic Environmental Approach",
-                    description: "We consider the entire ecosystem in our designs",
-                    icon: "🌍"
+                    title: "Timely Delivery",
+                    description: "Strict adherence to project timelines and deadlines",
+                    icon: "⏱️"
                   },
                   {
-                    title: "Transparent Process",
-                    description: "Clear communication and open-book project management",
-                    icon: "🔍"
+                    title: "Client-Centric Approach",
+                    description: "Solutions tailored to your specific requirements",
+                    icon: "🤝"
                   }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start p-4 bg-emerald-50 rounded-xl">
@@ -312,7 +299,7 @@ const ServicesPage = () => {
             </div>
             
             <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-2xl aspect-square flex items-center justify-center">
-              <span className="text-gray-500 text-lg">Sustainability Impact Visualization</span>
+              <span className="text-gray-500 text-lg">Service Impact Visualization</span>
             </div>
           </div>
         </div>
@@ -322,9 +309,9 @@ const ServicesPage = () => {
       <section className="py-16 bg-emerald-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Build Sustainably?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
             <p className="text-xl mb-10 max-w-2xl mx-auto text-emerald-100">
-              Whether you're planning a residential eco-home or a commercial green building, our team is ready to bring your vision to life with minimal environmental impact.
+              Whether you need construction, renovation, design, visualization, or regulatory approvals, our team is ready to assist.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="bg-white text-emerald-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300">
